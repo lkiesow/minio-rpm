@@ -43,5 +43,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Aug 22 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20190814T204949Z-1
+- Update to RELEASE.2019-08-14T20-49-49Z
+
 * Wed Aug 21 2019 Lars Kiesow <lkiesow@uos.de> 0.1.RELEASE.20190814T204949Z-1
 - initial build
