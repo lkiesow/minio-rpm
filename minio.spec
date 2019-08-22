@@ -13,9 +13,9 @@ Version:       0.1.%{stag}
 Release:       1%{?dist}
 License:       ASL 2.0
 
-Source0:       https://dl.min.io/server/minio/release/linux-amd64/%{name}.%{tag}
-Source1:       minio.service
-Source2:       minio.conf
+Source0:       https://dl.min.io/server/minio/release/linux-amd64/archive/%{name}.%{tag}
+Source1:       https://raw.githubusercontent.com/lkiesow/minio-rpm/master/minio.service
+Source2:       https://raw.githubusercontent.com/lkiesow/minio-rpm/master/minio.conf
 Source3:       https://raw.githubusercontent.com/minio/minio/%{tag}/LICENSE
 URL:           https://min.io
 BuildRoot:     %{_tmppath}/%{name}-root

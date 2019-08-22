@@ -9,7 +9,7 @@ Version:       0.1.%{stag}
 Release:       1%{?dist}
 License:       ASL 2.0
 
-Source0:       https://dl.min.io/client/mc/release/linux-amd64/mc.%{tag}
+Source0:       https://dl.min.io/client/mc/release/linux-amd64/archive/mc.%{tag}
 Source1:       https://raw.githubusercontent.com/minio/mc/%{tag}/LICENSE
 URL:           https://min.io
 BuildRoot:     %{_tmppath}/%{name}-root
