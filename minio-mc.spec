@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2019-08-21T19-59-10Z
+%define  tag   RELEASE.2019-08-29T00-40-57Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 
 Name:          minio-mc

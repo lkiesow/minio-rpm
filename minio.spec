@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2019-08-21T19-40-07Z
-%define  stag  RELEASE.20190821T194007Z
+%define  tag   RELEASE.2019-08-29T00-25-01Z
+%define  stag  %(echo "%{tag}" | tr -d '-')
 %define  uid   minio
 %define  gid   minio
 %define  nuid  7969
