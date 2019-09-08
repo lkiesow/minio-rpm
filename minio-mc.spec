@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2019-08-29T00-40-57Z
+%define  tag   RELEASE.2019-09-05T23-43-50Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 
 Name:          minio-mc
@@ -43,6 +43,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Sep 08 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20190905T234350Z-1
+- Update to RELEASE.2019-09-05T23-43-50Z
+
 * Sun Aug 25 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.-1
 - Update to RELEASE.2019-08-21T19-59-10Z
 - Generate stag via macro
