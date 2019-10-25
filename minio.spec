@@ -10,7 +10,7 @@
 Name:          minio
 Summary:       High performance object storage server compatible with Amazon S3 APIs
 Version:       0.1.%{stag}
-Release:       1%{?dist}
+Release:       2%{?dist}
 License:       ASL 2.0
 
 Source0:       https://dl.min.io/server/minio/release/linux-amd64/archive/%{name}.%{tag}
@@ -74,23 +74,23 @@ if [ ! $(getent group %{gid}) ]; then
 fi
 if [ ! $(getent passwd %{uid}) ]; then
    if [ ! $(getent passwd %{nuid}) ]; then
-      useradd -M -r -u %{nuid} -d /srv/opencast -g %{gid} %{uid} > /dev/null 2>&1 || :
+      useradd -M -r -u %{nuid} -d %{_sharedstatedir}/minio -g %{gid} %{uid} > /dev/null 2>&1 || :
    else
-      useradd -M -r -d /srv/opencast -g %{gid} %{uid} > /dev/null 2>&1 || :
+      useradd -M -r -d %{_sharedstatedir}/minio -g %{gid} %{uid} > /dev/null 2>&1 || :
    fi
 fi
 
 
 %post
-%systemd_post opencast.service
+%systemd_post minio.service
 
 
 %preun
-%systemd_preun opencast.service
+%systemd_preun minio.service
 
 
 %postun
-%systemd_postun_with_restart opencast.service
+%systemd_postun_with_restart minio.service
 
 
 %files
@@ -103,6 +103,10 @@ fi
 
 
 %changelog
+* Fri Oct 25 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20191012T013957Z-2
+- Fixed home directory
+- Fixed systemd unit configuration
+
 * Sun Oct 13 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20191012T013957Z-1
 - Update to RELEASE.2019-10-12T01-39-57Z
 
