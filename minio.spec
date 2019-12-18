@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2019-10-12T01-39-57Z
+%define  tag   RELEASE.2019-12-17T23-16-33Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 %define  uid   minio
 %define  gid   minio
@@ -103,6 +103,9 @@ fi
 
 
 %changelog
+* Wed Dec 18 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20191217T231633Z-2
+- Update to RELEASE.2019-12-17T23-16-33Z
+
 * Fri Oct 25 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20191012T013957Z-2
 - Fixed home directory
 - Fixed systemd unit configuration
