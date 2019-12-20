@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2019-12-17T23-16-33Z
+%define  tag   RELEASE.2019-12-19T22-52-26Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 %define  uid   minio
 %define  gid   minio
@@ -10,7 +10,7 @@
 Name:          minio
 Summary:       High performance object storage server compatible with Amazon S3 APIs
 Version:       0.1.%{stag}
-Release:       2%{?dist}
+Release:       1%{?dist}
 License:       ASL 2.0
 
 Source0:       https://dl.min.io/server/minio/release/linux-amd64/archive/%{name}.%{tag}
@@ -103,6 +103,9 @@ fi
 
 
 %changelog
+* Fri Dec 20 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20191219T225226Z-1
+- Update to RELEASE.2019-12-19T22-52-26Z
+
 * Wed Dec 18 2019 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20191217T231633Z-2
 - Update to RELEASE.2019-12-17T23-16-33Z
 
