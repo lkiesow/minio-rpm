@@ -24,4 +24,6 @@ if [ "$LATEST" != "$PKG" ]; then
 	VERSION="0.1.$(echo "${LATEST}" | tr -d '-')-1"
 	sed -i "s/^%define  tag .*/%define  tag   ${LATEST}/" minio.spec
 	sed -i "s/^%changelog/%changelog\n\* ${DATE} ${USER} - ${VERSION}\n- Update to ${LATEST}\n/" minio.spec
+
+	git commit minio.spec -m "Update MinIO to ${LATEST}"
 fi
