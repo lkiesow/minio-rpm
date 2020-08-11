@@ -33,7 +33,7 @@ jobs:
         ssh-keyscan github.com >> ~/.ssh/known_hosts
 
     - name: clone repository
-      run: git clone "git@github.com:lkiesow/minio-rpm.git"  ~/minio-rpm-clone
+      run: git clone "git@github.com:idcm/minio-rpm.git"  ~/minio-rpm-clone
 
     - name: update specs
       run: |
