@@ -4,8 +4,8 @@
 %define  stag  %(echo "%{tag}" | tr -d '-')
 %define  uid   minio
 %define  gid   minio
-%define  nuid  7969
-%define  ngid  7969
+%define  nuid  975
+%define  ngid  973
 
 Name:          minio
 Summary:       High performance object storage server compatible with Amazon S3 APIs
@@ -74,9 +74,9 @@ if [ ! $(getent group %{gid}) ]; then
 fi
 if [ ! $(getent passwd %{uid}) ]; then
    if [ ! $(getent passwd %{nuid}) ]; then
-      useradd -M -r -u %{nuid} -d %{_sharedstatedir}/minio -g %{gid} %{uid} > /dev/null 2>&1 || :
+      useradd -M -r -s /sbin/nologin -u %{nuid} -d %{_sharedstatedir}/minio -g %{gid} %{uid} > /dev/null 2>&1 || :
    else
-      useradd -M -r -d %{_sharedstatedir}/minio -g %{gid} %{uid} > /dev/null 2>&1 || :
+      useradd -M -r -s /sbin/nologin -d %{_sharedstatedir}/minio -g %{gid} %{uid} > /dev/null 2>&1 || :
    fi
 fi
 
