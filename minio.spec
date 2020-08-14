@@ -91,7 +91,6 @@ fi
 
 %postun
 %systemd_postun_with_restart minio.service
-userdel %{uid}
 
 
 %files
