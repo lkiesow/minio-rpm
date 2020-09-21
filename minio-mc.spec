@@ -3,7 +3,7 @@
 %define  tag   RELEASE.2020-09-18T00-13-21Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 
-Name:          minio-mc
+Name:          mc
 Summary:       MinIO Client
 Version:       0.1.%{stag}
 Release:       1%{?dist}
