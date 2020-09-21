@@ -14,13 +14,13 @@ Source1:       https://raw.githubusercontent.com/minio/mc/%{tag}/LICENSE
 URL:           https://min.io
 BuildRoot:     %{_tmppath}/%{name}-root
 BuildRequires: golang
+BuildRequires: git
 
 ## Disable debug packages.
 %define         debug_package %{nil}
 
 ## Go related tags.
 %define         gobuild(o:) go build -tags=kqueue -trimpath -ldflags "${LDFLAGS:-}" %{?**};
-%define         gopath          %{_libdir}/golang
 %define         import_path     github.com/minio/mc
 
 %description
@@ -36,8 +36,6 @@ install -d src/$(dirname %{import_path})
 ln -s ../../.. src/%{import_path}
 
 %build
-export GOPATH=$(pwd)
-
 # setup flags like 'go run buildscripts/gen-ldflags.go' would do
 tag=%{tag}
 version=${tag#RELEASE.}
