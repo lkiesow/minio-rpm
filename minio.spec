@@ -39,6 +39,12 @@ Amazon S3 Compatible Object Storage
 
 %prep
 %setup -qc
+mv %{name}-*/* .
+
+install -d src/$(dirname %{import_path})
+ln -s ../../.. src/%{import_path}
+
+
 
 %build
 # setup flags like 'go run buildscripts/gen-ldflags.go' would do
@@ -51,7 +57,7 @@ LDFLAGS="
 -X $prefix.ReleaseTag=$tag
 "
 
-%gobuild -o %{name}
+%gobuild -o %{name} %{import_path}
 
 # check that version set properly
 ./%{name} version | tee v
