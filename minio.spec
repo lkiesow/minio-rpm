@@ -31,25 +31,16 @@ Requires(postun):  systemd
 
 ## Go related tags.
 %define         gobuild(o:) go build -tags=kqueue -trimpath -ldflags "${LDFLAGS:-}" %{?**};
-%define         gopath          %{_libdir}/golang
 %define         import_path     github.com/minio/minio
-
 
 %description
 The 100 percent Open Source, Enterprise-Grade,
 Amazon S3 Compatible Object Storage
 
-
 %prep
 %setup -qc
-mv %{name}-*/* .
-
-install -d src/$(dirname %{import_path})
-ln -s ../../.. src/%{import_path}
 
 %build
-export GOPATH=$(pwd)
-
 # setup flags like 'go run buildscripts/gen-ldflags.go' would do
 tag=%{tag}
 version=${tag#RELEASE.}
