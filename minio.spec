@@ -20,6 +20,7 @@ Source3:       https://raw.githubusercontent.com/minio/minio/%{tag}/LICENSE
 URL:           https://min.io
 BuildRoot:     %{_tmppath}/%{name}-root
 
+BuildRequires:     git
 BuildRequires:     golang
 BuildRequires:     systemd
 Requires(post):    systemd
