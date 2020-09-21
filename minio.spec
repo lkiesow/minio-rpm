@@ -51,7 +51,7 @@ LDFLAGS="
 -X $prefix.ReleaseTag=$tag
 "
 
-%gobuild -o %{name} %{import_path}
+%gobuild -o %{name}
 
 # check that version set properly
 ./%{name} version | tee v
