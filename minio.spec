@@ -53,20 +53,9 @@ tag=%{tag}
 version=${tag#RELEASE.}
 prefix=%{import_path}/cmd
 
-LDFLAGS="
--X $prefix.Version=$version
--X $prefix.ReleaseTag=$tag
-"
+LDFLAGS="-X $prefix.Version=$version -X $prefix.ReleaseTag=$tag"
 
 %gobuild -o %{name} %{import_path}
-
-# check that version set properly
-./%{name} version | tee v
-
-v=$(awk '/Version:/{print $2}' v)
-test "$v" = $version
-v=$(awk '/Release-Tag:/{print $2}' v)
-test "$v" = $tag
 
 %install
 rm -rf %{buildroot}
