@@ -10,7 +10,7 @@
 Name:          minio
 Summary:       High performance object storage server compatible with Amazon S3 APIs
 Version:       0.1.%{stag}
-Release:       1%{?dist}
+Release:       2%{?dist}
 License:       ASL 2.0
 
 Source0:       https://dl.min.io/server/minio/release/linux-amd64/archive/%{name}.%{tag}
@@ -103,6 +103,9 @@ fi
 
 
 %changelog
+* Thu Oct 28 2021 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20211023T032824Z-2
+- Added MinIO Console port configuration
+
 * Sun Oct 24 2021 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20211023T032824Z-1
 - Update to RELEASE.2021-10-23T03-28-24Z
 
