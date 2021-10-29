@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2021-10-23T03-28-24Z
+%define  tag   RELEASE.2021-10-27T16-29-42Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 %define  uid   minio
 %define  gid   minio
@@ -103,6 +103,9 @@ fi
 
 
 %changelog
+* Fri Oct 29 2021 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20211027T162942Z-1
+- Update to RELEASE.2021-10-27T16-29-42Z
+
 * Thu Oct 28 2021 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20211023T032824Z-2
 - Added MinIO Console port configuration
 
