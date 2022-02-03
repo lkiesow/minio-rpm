@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2022-01-29T01-03-27Z
+%define  tag   RELEASE.2022-02-02T02-03-24Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 
 Name:          minio-mc
@@ -43,6 +43,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Feb 03 2022 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20220202T020324Z-1
+- Update to RELEASE.2022-02-02T02-03-24Z
+
 * Sun Jan 30 2022 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20220129T010327Z-1
 - Update to RELEASE.2022-01-29T01-03-27Z
 
