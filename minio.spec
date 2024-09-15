@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%define  tag   RELEASE.2024-09-09T16-59-28Z
+%define  tag   RELEASE.2024-09-13T20-26-02Z
 %define  stag  %(echo "%{tag}" | tr -d '-')
 %define  uid   minio
 %define  gid   minio
@@ -103,6 +103,9 @@ fi
 
 
 %changelog
+* Sun Sep 15 2024 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20240913T202602Z-1
+- Update to RELEASE.2024-09-13T20-26-02Z
+
 * Wed Sep 11 2024 Lars Kiesow <lkiesow@uos.de> - 0.1.RELEASE.20240909T165928Z-1
 - Update to RELEASE.2024-09-09T16-59-28Z
 
